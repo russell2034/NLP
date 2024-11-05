@@ -1,46 +1,45 @@
-# Chatbot_NLP
+# NLP Project (University)
 
-###### NLTK, TensorFlow, Keras, tkinter
+###### Technologies Used: NLTK, TensorFlow, Keras, tkinter
 
-> In this project, I build a chatbot using deep learning techniques. The chatbot will be trained on the dataset which contains categories (intents), pattern and responses. We use a special recurrent neural network (LSTM) to classify which category the user’s message belongs to and then we will give a random response from the list of responses.
+This project is another academic endeavor undertaken by our team, aimed at developing a simple chatbot utilizing the Long Short-Term Memory (LSTM) model. The chatbot is designed to engage users by understanding their messages and providing appropriate responses. It is trained on a dataset that consists of various categories (intents), associated patterns, and corresponding responses. The LSTM model plays a crucial role in classifying the category to which a user's message belongs, subsequently generating a random response from a predefined list.
+
+## Dataset
+
+- **File**: `intents.json`
+- This file can be edited to suit specific requirements.
+
+## Step 1: train_model.py
+
+- **Data Preprocessing**:
+    - Tokenization of input sentences.
+    - Stemming of each word from the tokenized output.
+    - Conversion of all text to lowercase.
+    - Removal of punctuation.
+
+- **Input and Output Datasets**:
+    - Creation of a bag-of-words model.
+    - The input comprises the patterns, while the output consists of the corresponding tag for each pattern.
+
+- **Model Architecture**:
+    - The neural network comprises three layers:
+        - First layer: 128 neurons.
+        - Second layer: 64 neurons.
+        - Output layer: Number of neurons equal to the number of intents, utilizing a softmax activation function for output prediction.
+
+- **Model Training**:
+    - The model is trained for 200 epochs.
+
+- **Serialization**:
+    - Saving the trained model for future use.
+
+## Step 2: user_interface.py
+
+- The user interface is developed using the Tkinter library in Python, providing a graphical interface for user interaction.
 
 
-### Dataset
 
-intents.json
 
-You can edit the file per your requirment.
-
-### Step 1: train_model.py
-
-- Data Preprocessing
-
-    - Tokenize input sentence 
-    - Stemmer each words from tokenized words
-    - Lower case
-    - Remove punctuations
-    
-- Input, output dataset
-
-    - Create bag of words 
-    - Input is the pattern 
-    - Output is the tag input pattern belongs to
-
-- Build the model - 3 layers
-    - First layer 128 neurons
-    - Second layer 64 neurons 
-    - 3rd output layer contains number of neurons equal to number of intents to predict output intent with softmax
-- Train the model
-    - 200 epoches
-- Serialization
-
-### Step 2: user_interface.py
-
-- Tkinter library comes in python
-
-### Inspired by: 
-
-Chat Bot With PyTorch - NLP And Deep Learning - Python Tutorial https://www.youtube.com/watch?v=8qwowmiXANQ
 
 Contextual Chatbots with Tensorflow https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077
 
