@@ -4,10 +4,7 @@
 
 This project is another academic endeavor undertaken by our team, aimed at developing a simple chatbot utilizing the Long Short-Term Memory (LSTM) model. The chatbot is designed to engage users by understanding their messages and providing appropriate responses. It is trained on a dataset that consists of various categories (intents), associated patterns, and corresponding responses. The LSTM model plays a crucial role in classifying the category to which a user's message belongs, subsequently generating a random response from a predefined list.
 
-## Dataset
 
-- **File**: `intents.json`
-- This file can be edited to suit specific requirements.
 
 ## Step 1: train_model.py
 
